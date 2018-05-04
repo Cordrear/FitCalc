@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FitCalc</title>
+	<link type="text/css" href="style.css" rel="stylesheet">
+</head>
+<body>
+	<article class="balance">
+		<section class="info">
+			<p>Баланс БЖУ: 30-10-60</p>
+			<p>Сжигание жира: 26 - 29 кк / 1 кг</p>
+			<p>Поддержание массы: 33-35 кк / 1 кг</p>
+			<p>Увеличение массы: 40-45 кк / 1 кг</p>
+		</section>
+		<section class="input">
+			<input type="number" id="weight" placeholder="Масса"/>
+			<input type="number" id="program" placeholder="кк / кг"/>
+			<button id="balance-btn">Рассчитать</button>
+		</section>
+		<section class="output">
+			<p>Калории: <span id="cals">?</span></p>
+			<p>Белки: <span id="prots">?</span> г.</p>
+			<p>Жиры: <span id="fats">?</span> г.</p>
+			<p>Углеводы: <span id="carbs">?</span> г.</p>
+		</section>
+	</article>
+	<article class="food">
+		<section class="food-list">
+			<iframe src="БЖУ.txt"></iframe>
+		</section>
+		<section class="calcs">
+			<input type="text" id="product" placeholder="Продукт"/>
+			<div class="inputs">
+				<input type="number" id="prot" placeholder="Б"/>
+				<input type="number" id="fat" placeholder="Ж"/>
+				<input type="number" id="carb" placeholder="У"/>
+				<input type="number" id="grams" placeholder="г."/>
+			</div>
+			<div class="buttons">
+				<button id="add-btn">Добавить</button>
+				<button id="clear-btn">Очистить</button>
+			</div>
+		</section>
+		<section class="total">
+			<div class="used">
+				<p class="underlined">Использовано:</p>
+				<p>Белки: <span id="prots-used">?</span> г.</p>
+				<p>Жиры: <span id="fats-used">?</span> г.</p>
+				<p>Углеводы: <span id="carbs-used">?</span> г.</p>
+			</div>
+			<div class="left">
+				<p class="underlined">Осталось:</p>
+				<p>Белки: <span id="prots-left">?</span> г.</p>
+				<p>Жиры: <span id="fats-left">?</span> г.</p>
+				<p>Углеводы: <span id="carbs-left">?</span> г.</p>
+			</div>
+		</section>
+	</article>
+	<article id="log">
+		
+	</article>
+	<script src="script.js"></script>
+</body>
+</html>
